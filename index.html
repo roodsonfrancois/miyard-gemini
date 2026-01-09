@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miyard Massage | Terapia Profesional en Santo Domingo</title>
+    
+    <!-- Tailwind CSS para estilos modernos y rápidos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#E2E8F0',
+                            DEFAULT: '#475569',
+                            dark: '#1E293B',
+                            accent: '#14B8A6', // Teal relajante
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+        .whatsapp-anim {
+            animation: pulse-ring 2s infinite;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-600 antialiased smooth-scroll">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <i class="fa-solid fa-spa text-brand-accent text-3xl mr-2"></i>
+                    <span class="font-serif text-2xl font-bold text-slate-800">Miyard Massage</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-slate-600 hover:text-brand-accent transition">Inicio</a>
+                    <a href="#servicios" class="text-slate-600 hover:text-brand-accent transition">Servicios</a>
+                    <a href="#perfil" class="text-slate-600 hover:text-brand-accent transition">Sobre Mí</a>
+                    <a href="#ubicacion" class="text-slate-600 hover:text-brand-accent transition">Ubicación</a>
+                </div>
+                <div>
+                    <a href="#agenda" class="bg-brand-accent text-white px-6 py-2 rounded-full font-semibold hover:bg-teal-600 transition shadow-lg">
+                        Reservar Cita
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg h-screen flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto text-white">
+            <p class="text-lg md:text-xl mb-4 tracking-widest uppercase opacity-90">Terapia Profesional en Santo Domingo</p>
+            <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                Renueva tu cuerpo,<br>calma tu mente.
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 font-light opacity-90">
+                Masajes terapéuticos y relajación profunda diseñados para restaurar tu bienestar.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#agenda" class="bg-brand-accent text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-teal-600 transition shadow-xl transform hover:-translate-y-1">
+                    Agendar Sesión
+                </a>
+                <a href="#servicios" class="bg-white/10 backdrop-blur-sm border border-white text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-slate-900 transition">
+                    Ver Tratamientos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl font-bold text-slate-800 mb-4">Mis Servicios</h2>
+                <div class="w-24 h-1 bg-brand-accent mx-auto"></div>
+                <p class="mt-4 text-lg text-slate-500">Terapias personalizadas adaptadas a tus necesidades.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Servicio 1 -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Masaje Relajante" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-serif text-2xl font-bold text-slate-800 mb-2">Masaje Relajante</h3>
+                        <p class="text-slate-600 mb-4">Técnicas suaves y fluidas para eliminar el estrés, mejorar la circulación y promover un descanso profundo.</p>
+                        <div class="flex justify-between items-center border-t pt-4">
+                            <span class="text-brand-accent font-bold text-xl">RD$ 2,500</span>
+                            <span class="text-sm text-slate-400">60 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tejido Profundo" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-serif text-2xl font-bold text-slate-800 mb-2">Tejido Profundo</h3>
+                        <p class="text-slate-600 mb-4">Ideal para contracturas crónicas y deportistas. Enfocado en las capas más profundas del músculo.</p>
+                        <div class="flex justify-between items-center border-t pt-4">
+                            <span class="text-brand-accent font-bold text-xl">RD$ 3,000</span>
+                            <span class="text-sm text-slate-400">60 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Aromaterapia" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-serif text-2xl font-bold text-slate-800 mb-2">Aromaterapia</h3>
+                        <p class="text-slate-600 mb-4">Una experiencia sensorial utilizando aceites esenciales orgánicos para equilibrar mente y cuerpo.</p>
+                        <div class="flex justify-between items-center border-t pt-4">
+                            <span class="text-brand-accent font-bold text-xl">RD$ 2,800</span>
+                            <span class="text-sm text-slate-400">60 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perfil Profesional -->
+    <section id="perfil" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-brand-accent/20 rounded-full z-0"></div>
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Terapeuta Profesional" class="relative z-10 rounded-lg shadow-2xl w-full object-cover h-[500px]">
+                        <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-slate-200 rounded-full z-0"></div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="font-serif text-4xl font-bold text-slate-800 mb-6">Tu bienestar en manos expertas</h2>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        Hola, soy <span class="font-bold text-brand-accent">Miyard Francois</span>. Con más de 10 años de experiencia en fisioterapia y masajes holísticos, mi misión es ayudarte a desconectar del caos urbano de Santo Domingo y reconectar contigo mismo.
+                    </p>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        Certificada internacionalmente y apasionada por la salud integral, ofrezco un espacio seguro y profesional donde cada sesión es diseñada exclusivamente para ti.
+                    </p>
+                    <div class="flex gap-4">
+                        <div class="text-center">
+                            <span class="block text-3xl font-bold text-brand-accent">10+</span>
+                            <span class="text-sm text-slate-500">Años Exp.</span>
+                        </div>
+                        <div class="w-px bg-slate-300"></div>
+                        <div class="text-center">
+                            <span class="block text-3xl font-bold text-brand-accent">500+</span>
+                            <span class="text-sm text-slate-500">Clientes Felices</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Agenda / Booking -->
+    <section id="agenda" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-4xl font-bold mb-4">Agenda tu Cita</h2>
+                <p class="text-slate-300">Selecciona tus preferencias y coordinaremos vía WhatsApp.</p>
+            </div>
+
+            <div class="bg-white text-slate-800 rounded-2xl shadow-2xl p-8 md:p-10">
+                <form id="bookingForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Nombre Completo</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/50 outline-none transition" placeholder="Ej. María Pérez">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Teléfono</label>
+                            <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/50 outline-none transition" placeholder="Ej. 809-555-5555">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Servicio Deseado</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/50 outline-none transition bg-white">
+                                <option value="Masaje Relajante">Masaje Relajante</option>
+                                <option value="Tejido Profundo">Tejido Profundo</option>
+                                <option value="Aromaterapia">Aromaterapia</option>
+                                <option value="Consulta General">Consulta General</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Fecha Preferida</label>
+                            <input type="date" id="date" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/50 outline-none transition">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Hora Preferida</label>
+                        <select id="time" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/50 outline-none transition bg-white">
+                            <option value="Mañana (9AM - 12PM)">Mañana (9AM - 12PM)</option>
+                            <option value="Tarde (2PM - 6PM)">Tarde (2PM - 6PM)</option>
+                            <option value="Noche (6PM - 8PM)">Noche (6PM - 8PM)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full bg-brand-accent text-white font-bold py-4 rounded-lg hover:bg-teal-600 transition flex items-center justify-center gap-2 text-lg shadow-lg">
+                        Confirmar Cita
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación y Mapa -->
+    <section id="ubicacion" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <h2 class="font-serif text-4xl font-bold text-slate-800 mb-6">Ubicación</h2>
+                    <p class="text-lg text-slate-600 mb-8">
+                        Ubicada en el corazón de Santo Domingo, en un espacio diseñado para la tranquilidad y el silencio.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-accent/10 p-3 rounded-full text-brand-accent">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Dirección</h4>
+                                <p class="text-slate-600">Av. Winston Churchill, Santo Domingo, República Dominicana.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-accent/10 p-3 rounded-full text-brand-accent">
+                                <i class="fa-solid fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Horario</h4>
+                                <p class="text-slate-600">Lunes a Sábado: 9:00 AM - 8:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-96 bg-slate-200 rounded-2xl overflow-hidden shadow-lg">
+                    <!-- Mapa embebido apuntando a Santo Domingo -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60596.57536486734!2d-69.96347674179687!3d18.480187500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf89f1107ea5ab%3A0xd6c587b82715c164!2sSanto%20Domingo%2C%20Rep%C3%fablica%20Dominicana!5e0!3m2!1ses!2s!4v1684428564123!5m2!1ses!2s" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex justify-center items-center mb-8">
+                <i class="fa-solid fa-spa text-brand-accent text-2xl mr-2"></i>
+                <span class="font-serif text-xl font-bold text-white">Miyard Massage</span>
+            </div>
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="#" class="hover:text-brand-accent transition"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                <a href="#" class="hover:text-brand-accent transition"><i class="fa-brands fa-facebook text-2xl"></i></a>
+                <a href="#" class="hover:text-brand-accent transition"><i class="fa-brands fa-tiktok text-2xl"></i></a>
+            </div>
+            <p class="text-sm">&copy; 2024 Miyard Massage. Todos los derechos reservados. Santo Domingo, RD.</p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/18494050277" target="_blank" class="whatsapp-anim fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50 flex items-center justify-center group">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="absolute right-full mr-4 bg-white text-slate-800 px-3 py-1 rounded shadow-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none">
+            ¡Chatea conmigo!
+        </span>
+    </a>
+
+    <!-- Script para funcionalidad de Agenda -->
+    <script>
+        // Configuración de fechas y validación de disponibilidad
+        const dateInput = document.getElementById('date');
+        
+        // 1. Establecer fecha mínima como hoy (no permitir pasado)
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+
+        // 2. Simular fechas ocupadas (Para el demo: mañana y pasado mañana están ocupados)
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const dayAfter = new Date();
+        dayAfter.setDate(dayAfter.getDate() + 2);
+        
+        const takenDates = [
+            tomorrow.toISOString().split('T')[0],
+            dayAfter.toISOString().split('T')[0]
+        ];
+
+        dateInput.addEventListener('input', function(e) {
+            if(takenDates.includes(this.value)) {
+                alert('⚠️ Lo sentimos, esta fecha ya está reservada en Miyard Massage.\nPor favor selecciona otro día disponible.');
+                this.value = ''; // Limpiar selección
+            }
+        });
+
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Obtener valores
+            const name = document.getElementById('name').value;
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            
+            // Número de teléfono de la profesional (Reemplazar con el real)
+            const phoneNumber = "18494050277"; 
+            
+            // Crear mensaje
+            const message = `Hola, mi nombre es ${name}. Me gustaría agendar una cita para:
+            
+💆‍♀️ Servicio: ${service}
+📅 Fecha: ${date}
+⏰ Horario: ${time}
+
+¿Está disponible?`;
+
+            // Codificar URL
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            
+            // Abrir WhatsApp
+            window.open(url, '_blank');
+        });
+    </script>
+</body>
+</html>
